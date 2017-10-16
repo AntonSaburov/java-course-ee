@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window title="ZK Window" border="normal" apply="ru.gs.zk.MyComposer" >
+		<!--<grid id="grid" emptyMessage="Grid id empty">-->
+			<!--<columns>-->
+				<!--<column label="ID"></column>-->
+				<!--<column label="Имя"></column>-->
+				<!--<column label="Фамилия"></column>-->
+				<!--<column label="Дата рождения"></column>-->
+				<!--<column label="Зарплата"></column>-->
+			<!--</columns>-->
+			<!--<rows>-->
+				<!--<template name="model">-->
+					<!--<row value="${each}">-->
+						<!--<label value="${each.id}" />-->
+						<!--<textbox value="${each.name}" />-->
+						<!--<label value="${each.surname}" />-->
+						<!--<datebox value="${each.birthDate}" />-->
+						<!--<label value="${each.salary}" />-->
+					<!--</row>-->
+				<!--</template>-->
+			<!--</rows>-->
+		<!--</grid>-->
+		
+		<listbox id="grid" emptyMessage="List is empty">
+			<listhead>
+				<listheader label="ID"></listheader>
+				<listheader label="Имя"></listheader>
+				<listheader label="Фамилия"></listheader>
+				<listheader label="Дата рождения"></listheader>
+				<listheader label="Зарплата"></listheader>
+			</listhead>
+			<template name="model">
+				<listitem value="${each}">
+					<listcell label="${each.id}" />
+					<listcell label="${each.name}" />
+					<listcell label="${each.surname}" />
+					<listcell label="${each.birthDate}" />
+					<listcell label="${each.salary}" />
+				</listitem>
+			</template>
+		</listbox>
+		<button id="ok" type="submit">ОК</button>
+	</window>
+
+</zk>
